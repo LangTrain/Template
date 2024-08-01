@@ -1,35 +1,115 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# .gitignore
 
-# dependencies
-node_modules/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Expo
-.expo/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
 dist/
-web-build/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.orig
+*.py.orig
+db.sqlite3
+/media
+/staticfiles
+/static
 
-# Metro
-.metro-health-check*
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# Translations
+*.mo
+*.pot
 
-# macOS
-.DS_Store
-*.pem
+# Django migrations
+**/migrations/
 
-# local env files
-.env*.local
+# PyBuilder
+target/
 
-# typescript
-*.tsbuildinfo
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IDEs and editors
+.idea/
+.project
+.pydevproject
+*.sublime-project
+*.sublime-workspace
+
+# Pycharm
+/.idea
+*.iml
+*.ipr
+*.iws
+__pycache__/
+
+# My Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+env.js
+firebase_key.json
+
+.venv
+.env

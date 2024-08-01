@@ -23,3 +23,9 @@ generate firebase key from service accounts and put into firebase_key.json file 
 pip install -r requirements.txt
 
 python manage.py runserver
+
+RUN TESTS:
+
+python manage.py test
+
+or check manual tests in example_tests.txt

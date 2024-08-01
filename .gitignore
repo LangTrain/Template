@@ -110,3 +110,6 @@ dmypy.json
 .pyre/
 env.js
 firebase_key.json
+
+.venv
+.env

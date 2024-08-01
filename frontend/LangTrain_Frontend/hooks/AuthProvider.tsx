@@ -20,6 +20,8 @@ import { auth, db } from "../firebase";
 interface UserProfileInterface {
   email: string;
   createdAt: Timestamp;
+  first_name: string;
+  last_name: string;
 }
 
 export async function createUserProfile(
@@ -119,6 +121,8 @@ export function SessionProvider({ children }: SessionProviderProps) {
         await createUserProfile(user.uid, {
           email: user.email,
           createdAt: Timestamp.now(),
+          first_name: "",
+          last_name: "",
         });
       }
     } catch (error) {
