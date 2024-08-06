@@ -24,8 +24,7 @@ const FormInput: React.FC<FormInputProps> = ({
   value,
   placeholder,
   handleChangeText,
-  otherStyles,
-  ...props
+  otherStyles
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -44,10 +43,9 @@ const FormInput: React.FC<FormInputProps> = ({
           placeholder={placeholder!}
           onChangeText={handleChangeText}
           secureTextEntry={
-            (title === "Password" || placeholder === "confirm password") &&
+            (title === "Password" || title === "Confirm Password") &&
             !showPassword
           }
-          {...props}
         />
 
         {isPasswordField && (
