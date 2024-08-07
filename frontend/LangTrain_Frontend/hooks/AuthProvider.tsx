@@ -1,4 +1,5 @@
 // AuthProvider.js
+"use client"
 import React, { createContext, useContext, useEffect, useState } from "react";
 import {
   getAuth,
@@ -39,7 +40,7 @@ export async function createUserProfile(
 interface AuthContextType {
   signIn: (method: string, credentials: any) => void;
   signOut: () => Promise<void>;
-  signUp: (email: string, password: string) => Promise<void>;
+  signUp: (email: string, password: string) => void;
   forgotPassword: (email: string) => Promise<void>;
   resendVerificationEmail: () => Promise<void>;
   currentUser?: User | null;
@@ -66,10 +67,10 @@ interface SessionProviderProps {
 
 export function SessionProvider({ children }: SessionProviderProps) {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean | null>(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user:User) => {
       setCurrentUser(user);
       setIsLoading(false);
     });
